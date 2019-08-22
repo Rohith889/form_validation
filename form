@@ -20,7 +20,7 @@
                      return false;
                     
                 }
-                else if(firstname.value.lenth<=3||lastname.value.length<=3)
+                else if(firstname.value.length<=3||lastname.value.length<=3)
                 {
                      alert("min charecters 4...!")
                      return false;
