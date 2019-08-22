@@ -59,7 +59,6 @@
         <form onsubmit=" return validate()" action="check.html"><pre>
             <label for="firstname"><b>firstname:</b></label>
             <input id="firstname" placeholder="firstname" type="text"/><br><br>
-          
             <label for="lastname"><b>lastname:</b></label>
             <input id="lastname" placeholder="lastname" type="text"/><br><br></pre>
             <div id="GENDER">
@@ -70,7 +69,6 @@
             <label for="username"><b>username:</b></label>
             <input id="username" placeholder="username" type="text"/><br><br>
             <label for="password"><b>password:</b></label>
-            
             <input id="password" placeholder="password" type="password"/><br>
             <small>* dont share your password with anyone...!</small><br><br>
             <label for="confirmpassword"><b>Re-password:</b></label>
