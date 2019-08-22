@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Registration forms</title>
+        <h1 class="jumbotron"><center>Registration form</center></h1>
+        <script>
+            function validate()
+            {
+                var firstname=document.getElementById("firstname");
+                var lastname=document.getElementById("lastname");
+                var gender=document.getElementById("gender");
+                var username=document.getElementById("username");
+                var password=document.getElementById("password");
+                var confirmpassword=document.getElementById("confirmpassword");
+
+                if(firstname.value.trim()==""|| lastname.value.trim()==""||username.value.trim()==""||password.value.trim()==""||confirmpassword.value.trim()=="")
+                {
+                     alert("please fill the requirements...!");
+                     return false;
+                    
+                }
+                else if(firstname.value.lenth<=3||lastname.value.length<=3)
+                {
+                     alert("min charecters 4...!")
+                     return false;
+                }
+                else if(password.value!==confirmpassword.value)
+                {
+                     alert("Re-password is different...!");
+                     return false;
+                }
+                else
+                {
+                     return true;
+
+                }
+            var GENDER = document.getElementById('GENDER').value;
+            var GENDER_value;
+            if(GENDER!=="male"||GENDER!=="female"||GENDER!=="others")
+            {
+                alert("please select Gender....!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        </script>
+        <style>
+            body{
+                background-color:coral;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <form onsubmit=" return validate()" action="check.html"><pre>
+            <label for="firstname"><b>firstname:</b></label>
+            <input id="firstname" placeholder="firstname" type="text"/><br><br>
+          
+            <label for="lastname"><b>lastname:</b></label>
+            <input id="lastname" placeholder="lastname" type="text"/><br><br></pre>
+            <div id="GENDER">
+            <label for="gender"><b>Gender:</b></label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other</div><br><br><pre>
+            <label for="username"><b>username:</b></label>
+            <input id="username" placeholder="username" type="text"/><br><br>
+            <label for="password"><b>password:</b></label>
+            
+            <input id="password" placeholder="password" type="password"/><br>
+            <small>* dont share your password with anyone...!</small><br><br>
+            <label for="confirmpassword"><b>Re-password:</b></label>
+            <input id="confirmpassword" placeholder="confirm password" type="password"/><br><br>
+            <button type="submit" >submit</button>
+        </form>
+        </center>
+    </body>
+
+</html>
