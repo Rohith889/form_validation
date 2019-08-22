@@ -35,22 +35,22 @@
                      return true;
 
                 }
-            var GENDER = document.getElementById('GENDER').value;
-            var GENDER_value;
-            if(GENDER!=="male"||GENDER!=="female"||GENDER!=="others")
-            {
-                alert("please select Gender....!");
-                return false;
+                
+                
+                var genderM=gender.male;
+                var genderF=gender.female;
+
+                if(genderM.checked==false && genderF.checked==false )
+                {
+                     alert("You must select male or female");
+                     return false;
+                }   
+                
             }
-            else
-            {
-                return true;
-            }
-        }
         </script>
         <style>
             body{
-                background-color:coral;
+                background-color:darkseagreen;
             }
         </style>
     </head>
@@ -64,9 +64,9 @@
             <input id="lastname" placeholder="lastname" type="text"/><br><br></pre>
             <div id="GENDER">
             <label for="gender"><b>Gender:</b></label>
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female
-            <input type="radio" name="gender" value="other"> Other</div><br><br><pre>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female" checked> Female
+            <input type="radio" name="gender" value="other" checked> Other</div><br><br><pre>
             <label for="username"><b>username:</b></label>
             <input id="username" placeholder="username" type="text"/><br><br>
             <label for="password"><b>password:</b></label>
